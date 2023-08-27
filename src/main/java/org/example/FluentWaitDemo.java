@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Wait;
 import java.time.Duration;
 import java.util.function.Function;
 
-public class FluentWait {
+public class FluentWaitDemo {
     public static void main(String[] args) {
 
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Ladi\\Desktop\\chromedriver-win64\\chromedriver.exe");
@@ -31,6 +31,8 @@ public class FluentWait {
                 .ignoring(NoSuchElementException.class);
 
 
+
+
         WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
             @Override
             public WebElement apply(WebDriver driver) {
@@ -45,6 +47,7 @@ public class FluentWait {
 
             }
         });
+
 
 
         System.out.println(webDriver.findElement(By.cssSelector("[id='finish'] h4")).getText());
